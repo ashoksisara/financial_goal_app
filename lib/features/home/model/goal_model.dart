@@ -20,16 +20,15 @@ class GoalModel {
   factory GoalModel.fromJson(Map<String, dynamic> json) {
     int i = -1;
     return GoalModel(
-      title: json['title'],
-      completionDate:
-          DateFormatter.dateTimeFromTimeStamp(json['completionDate']),
-      contributionAmount: json['contributionAmount'],
-      contributionList: List.from(
-          json['contributionList'].map((x) {
-            i++;
-            return ContributionModel.fromJson(x,i);
-          })),
-      goalAmount: json['goalAmount']);
+        title: json['title'],
+        completionDate:
+            DateFormatter.dateTimeFromTimeStamp(json['completionDate']),
+        contributionAmount: json['contributionAmount'],
+        contributionList: List.from(json['contributionList'].map((x) {
+          i++;
+          return ContributionModel.fromJson(x, i);
+        })),
+        goalAmount: json['goalAmount']);
   }
 
   Map<String, dynamic> toJson() => {
@@ -45,11 +44,9 @@ class GoalModel {
 
   num get neededSavings => (goalAmount ?? 0) - (contributionAmount ?? 0);
 
-  num _neededSavingsMonthly(){
-    if((contributionList ?? []).isEmpty){
-      return 0;
-    }
-    return (contributionAmount ?? 0) ~/ contributionList!.length;
+  num _neededSavingsMonthly() {
+    return ((goalAmount ?? 0) - (contributionAmount ?? 0)) ~/
+        DateFormatter.getTotalMonthRemaining(completionDate ?? DateTime.now());
   }
 
   num get neededSavingsMonthly => _neededSavingsMonthly();
