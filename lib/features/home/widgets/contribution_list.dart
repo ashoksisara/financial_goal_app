@@ -59,7 +59,7 @@ class ContributionText extends StatelessWidget {
             ],
           ),
           const Spacer(),
-          Text('\$${contribution.amount?.toInt()}')
+          Text('\$${contribution.amount ?? 0}')
         ],
       ),
     );

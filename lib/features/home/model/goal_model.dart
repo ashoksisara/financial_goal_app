@@ -1,7 +1,7 @@
-import 'package:financial_goal_app/utils/date_formatter.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants/app_colors.dart';
+import '../../../utils/date_formatter.dart';
 
 class GoalModel {
   num? goalAmount;
@@ -46,7 +46,7 @@ class GoalModel {
 
   num _neededSavingsMonthly() {
     return ((goalAmount ?? 0) - (contributionAmount ?? 0)) ~/
-        DateFormatter.getTotalMonthRemaining(completionDate ?? DateTime.now());
+        DateFormatter.getTotalMonthDifference(completionDate ?? DateTime.now());
   }
 
   num get neededSavingsMonthly => _neededSavingsMonthly();

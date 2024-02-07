@@ -17,9 +17,10 @@ class DateFormatter {
     return DateFormat('MMM yyyy').format(dateTime);
   }
 
-  ///get Total Month Remaining
-  static num getTotalMonthRemaining(DateTime completionDate) {
-    final now = DateTime.now(); //current time
+  //get total month difference
+  static num getTotalMonthDifference(DateTime completionDate) {
+    //current time
+    final now = DateTime.now();
     //first get month difference from year than from months
     int totalMonths = (completionDate.year - now.year) * 12 +
         (completionDate.month - now.month);

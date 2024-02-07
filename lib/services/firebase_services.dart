@@ -1,9 +1,13 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class FirebaseServices {
-  CollectionReference goals = FirebaseFirestore.instance.collection('goals');
+  static const String goalCollection = 'goals';
+  static const String goalDocId = 'goal1';
 
-  Stream<DocumentSnapshot> getGoalStream(String goalId) {
-    return goals.doc(goalId).snapshots();
+  CollectionReference goals =
+      FirebaseFirestore.instance.collection(goalCollection);
+
+  Stream<DocumentSnapshot> getGoalStream() {
+    return goals.doc(goalDocId).snapshots();
   }
 }

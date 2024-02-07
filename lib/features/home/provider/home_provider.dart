@@ -8,7 +8,7 @@ class HomeProvider extends ChangeNotifier {
 
   //Real-time data retrieval from CLoud Firestore
   void listenGoalData() {
-    FirebaseServices().getGoalStream('goal1').listen((event) {
+    FirebaseServices().getGoalStream().listen((event) {
       goal = GoalModel.fromJson(event.data() as Map<String, dynamic>);
       notifyListeners(); //update when
     }, onError: (e) {

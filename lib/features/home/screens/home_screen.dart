@@ -19,6 +19,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
+    //start listening to changes from firestore
     final homeProvider = Provider.of<HomeProvider>(context, listen: false);
     homeProvider.listenGoalData();
     super.initState();
