@@ -1,0 +1,48 @@
+name: financial_goal_app
+description: "Personal Financial Goal App"
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  cupertino_icons: ^1.0.2
+
+  #circular progress
+  sleek_circular_slider: ^2.0.1
+
+  #state management
+  provider: ^6.1.1
+
+  #firebase services
+  firebase_core: ^2.25.4
+  cloud_firestore: ^4.15.4
+
+  #date formatting and parsing
+  intl: ^0.19.0
+
+  #animate widget
+  flutter_animate: ^4.5.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+
+
+# The following section is specific to Flutter packages.
+flutter:
+
+
+  uses-material-design: true
+
+

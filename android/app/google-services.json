@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "274298314253",
+    "project_id": "personal-finance-goal",
+    "storage_bucket": "personal-finance-goal.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:274298314253:android:b99db89c9f9e448428ff44",
+        "android_client_info": {
+          "package_name": "com.example.financial_goal_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuyzxIP4DgNMGBruajofxLz2J9FB0QdLc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
