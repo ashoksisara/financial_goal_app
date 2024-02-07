@@ -6,7 +6,7 @@
 Before you begin, ensure you have the following installed on your machine:
 
 - [Flutter 3.16.5](https://flutter.dev/docs/get-started/install) 
-- 
+
 ### Setting up Firebase
 
 1. Create a new project on the [Firebase Console](https://console.firebase.google.com/).
@@ -53,4 +53,10 @@ To seed the dummy data in Firestore, follow these steps:
 
 ```bash
 flutter run
+```
+
+### screenshot
+
+<img src="https://github.com/ashoksisara/financial_goal_app/assets/48236083/a180fdaf-011b-4c9c-acb9-68ca60a7ce40" width="300">
+
  
